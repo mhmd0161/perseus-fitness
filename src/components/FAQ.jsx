@@ -47,7 +47,8 @@ export default function FAQ() {
           {faqs.map((item, i) => (
             <div
               key={i}
-              className={`faq-item fade-up fade-up-delay-${Math.min(i + 1, 5)} ${openIdx === i ? 'open' : ''}`}
+              className={`faq-item faq-entrance ${openIdx === i ? 'open' : ''}`}
+              style={{ animationDelay: `${i * 0.07}s` }}
               onClick={() => setOpenIdx(openIdx === i ? null : i)}
             >
               <div className="faq-q">

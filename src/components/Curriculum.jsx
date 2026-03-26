@@ -64,7 +64,8 @@ export default function Curriculum() {
           {modules.map((mod, i) => (
             <div
               key={i}
-              className={`module fade-up fade-up-delay-${Math.min(i + 1, 5)} ${openIdx === i ? 'open' : ''}`}
+              className={`module module-entrance ${openIdx === i ? 'open' : ''}`}
+              style={{ animationDelay: `${i * 0.08}s` }}
               onClick={() => setOpenIdx(openIdx === i ? -1 : i)}
             >
               <div className="module-header">
