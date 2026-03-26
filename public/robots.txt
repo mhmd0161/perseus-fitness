@@ -1,0 +1,9 @@
+# Perseus Fitness — robots.txt
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://perseus-fitness.vercel.app/sitemap.xml
+
+# Block any build artifacts
+Disallow: /assets/*.map
