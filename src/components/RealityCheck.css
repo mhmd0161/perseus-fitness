@@ -1,0 +1,113 @@
+.reality {
+  padding: 8rem 2rem;
+}
+
+.reality-inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.reality-header {
+  text-align: center;
+  margin-bottom: 4rem;
+}
+
+.reality-title {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.8rem);
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  color: var(--white);
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.reality-cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1.5rem;
+}
+
+.reality-card {
+  background: var(--card-bg);
+  border: 1px solid var(--card-border);
+  border-radius: 16px;
+  padding: 2.5rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.reality-card--after {
+  border-color: var(--gold-border);
+  background: rgba(245,158,11,0.04);
+}
+
+.reality-card--after::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+}
+
+.card-tag {
+  font-family: var(--font-condensed);
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.25em;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.card-tag--before {
+  color: var(--muted);
+}
+
+.card-tag--after {
+  color: var(--gold);
+}
+
+.reality-card ul {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.reality-card li {
+  display: flex;
+  gap: 0.75rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+.reality-card--before li {
+  color: var(--muted);
+}
+
+.reality-card--after li {
+  color: var(--off-white);
+}
+
+.dash {
+  color: var(--muted);
+  flex-shrink: 0;
+  font-weight: 300;
+}
+
+.arrow {
+  color: var(--gold);
+  flex-shrink: 0;
+  font-weight: 700;
+}
+
+@media (max-width: 700px) {
+  .reality-cards {
+    grid-template-columns: 1fr;
+  }
+  .reality { padding: 5rem 1.5rem; }
+}
